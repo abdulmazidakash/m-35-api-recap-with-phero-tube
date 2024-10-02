@@ -12,12 +12,27 @@ const loadCategories = ()=>{
 		.catch(error => console.log(error));
 }
 
+// {
+// 	"category_id": "1001",
+// 	"category": "Music"
+//   }
+
 //create display categories
 
-const displayCategories = (data)=>{
+const displayCategories = (categories)=>{
 
+	const categoryContainer = document.getElementById('categories');
 	//add data in html
-	console.log(data)
+	// console.log(data)
+	categories.forEach((item)=>{
+		console.log(item);
+		const button = document.createElement('button');
+		button.innerText = item.category;
+		button.classList.add('btn');
+
+		categoryContainer.append(button);
+	})
+
 }
 
 loadCategories();
