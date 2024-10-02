@@ -82,6 +82,7 @@ const displayVideos = (videos)=>{
 // 	"category": "Music"
 //   }
 
+
 //create display categories
 
 const displayCategories = (categories)=>{
