@@ -36,7 +36,7 @@ const loadCategories = ()=>{
 
 //video categories 
 
-const loadVideos = (searchText)=>{
+const loadVideos = (searchText = '')=>{
 	fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
 		.then((res) => res.json())
 		.then((data) => displayVideos(data.videos))
